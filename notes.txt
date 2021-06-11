@@ -1,0 +1,11 @@
+
+
+# make sure logs files are create daily
+
+# the rate limit implementation is based on memory store, it should or rather "prefered" to be used only on development and not on production, as it may cause some memory leak. Also, it is not really effiecent, because of the proccess ends all the data will be gone, so a better choice would be redis or memcached.
+
+# The logger here 'only' logs http requesst, on reality , the error messages as well as different logs levels are all recorded (on production) on logs files with the http request. But I prefered here to only record http requests level  (ofc you can the level to whatever you want) The logger here create a log file everyday and appends to it the recorded http requests that include stuff like the request ip and the useragent and other important information. 
+to do
+
+# on the production enable https server by generating certs.
+1- invalidate jwt token
